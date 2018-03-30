@@ -25,7 +25,7 @@ SECRET_KEY = 'ukea$l%25qg=^t0!wm4&09m63j7g*m@5-4x*e-p5=_94f%8-x^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #record app
+    'record',
+    #add Django rest framework
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -120,5 +124,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
+#static files remain with app
+STATIC_URL = '/static/'  
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
-STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

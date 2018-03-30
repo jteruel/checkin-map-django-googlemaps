@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+  <div class="row">
+  	<div class="col-md-2"></div>
+  	<div class="col-md-8">
+		<div class="panel panel-default"> 
+	        <div class="panel-heading">Create Event</div>
+	        <div class="panel-body"> 
+				 <form method="POST" enctype="multipart/form-data"> {% csrf_token %}
+				   <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
+					<script src="https://unpkg.com/flatpickr"></script>
+					<script type="text/javascript">
+					 $(function () {
+					  $(".flatpickr").flatpickr({
+					    enableTime: true
+					  });
+					});
+				   </script> 
+
+				   <script src="{% static 'js/inputTags.jquery.js' %}"></script> 
+                <script>
+                  jQuery(document).ready(function($) {
+                   $('#event_tags').inputTags();
+                  });
+                </script>
+				  {{ form.as_p }}
+				 <br/> 
+				  
+				 <input type="submit" value="Save" class="btn btn-md btn-primary">  
+				</form>
+			</div>
+			</div>
+    </div>
+	</div>
+</div> 
+ 
+{% endblock content %} 
