@@ -16,7 +16,8 @@ geolocator = Nominatim()
 
 #View to see all points
 def record_map(request):
-	return render(request, "record/map.html")
+	 
+	return render(request, "home.html")
 
 #create a new location
 def create_record(request):
