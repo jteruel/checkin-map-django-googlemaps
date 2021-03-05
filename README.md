@@ -17,4 +17,4 @@ Whatever you do, this wasn't built for deployment on a production server. Should
 1. To get it working on your machine, ensure you have your virtual environment up an running. 
 2. I used a MAMP server on my system. You will have to make changes to the settings.py file if you are using LAMP or WAMP.
 
-- If you have any questions or feedback, I can be reached via email at jeffreyteruel@gmail.com. 
+- If you have any questions or feedback, I can be reached via email at jeffrey.teruel@tutanota.com. 
